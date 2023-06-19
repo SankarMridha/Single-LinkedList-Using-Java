@@ -1,4 +1,9 @@
 import java.util.*;
+/*
+Write a menu driven Java Program using class, methods and reference variables, to construct
+a singly linked list consisting of the following information in each node: student regd_no
+(int), mark secured in a subject (float).
+*/
 class Node
 {
 	protected int regd_no;
@@ -6,6 +11,7 @@ class Node
 	protected Node next;
 }
 public class LinkedList {
+	// create a singly linked list at the beginning
     public static Node create(Node start)
     {
     	Node last = null;
@@ -36,6 +42,7 @@ public class LinkedList {
     	}while(ch=='Y'||ch=='y');
     	return start;
     }
+	// Visit all nodes from singly linked list and display the registration number and mark
     public static void display(Node start)
     {
     	Node p = start;
@@ -46,6 +53,7 @@ public class LinkedList {
     		p = p.next;
     	}
     }
+	// add one node at the beginning of singly linked list
     public static Node InsBeg(Node start)
     {
     	Scanner sc = new Scanner(System.in);
@@ -60,6 +68,7 @@ public class LinkedList {
 		start = node;
     	return start;
     }
+	// add one node at the end of singly linked list
     public static Node InsEnd(Node start)
     {
     	Scanner sc = new Scanner(System.in);
@@ -79,6 +88,7 @@ public class LinkedList {
 		q.next = node;
     	return start;
     }
+	// add one node at any position of singly linked list
     public static Node InsAny(Node start)
     {
     	Scanner sc = new Scanner(System.in);
@@ -121,6 +131,7 @@ public class LinkedList {
         }
     	return start;
     }
+	// delete one node from the beginning of singly linked list
     public static Node DelBeg(Node start)
     {
     	if(start==null)
@@ -135,6 +146,7 @@ public class LinkedList {
     	}
     	return start;
     }
+	// delete one node from the end of singly linked list
     public static Node DelEnd(Node start)
     {
     	if(start==null)
@@ -155,6 +167,7 @@ public class LinkedList {
     	}
     	return start;
     }
+	// delete one node from the any position of singly linked list
     public static Node DelAny(Node start)
     {
     	Scanner sc = new Scanner(System.in);
@@ -182,6 +195,7 @@ public class LinkedList {
         }
     	return start;
     }
+	// delete one node from singly linked list based on registration number
     public static Node DelNode_regNumber(Node start)
     {
     	Scanner sc = new Scanner(System.in);
@@ -229,6 +243,7 @@ public class LinkedList {
     	}
     	return c;
     }
+	// Search one node present in linkedlist or not, if present then update marks
     public static void search(Node start)
     {
     	int f = 0;
@@ -254,6 +269,7 @@ public class LinkedList {
     		System.out.println("Error: registration number not found");
     	}
     }
+	// code to reverse a linkedlist 
     public static Node reverse(Node start)
     {
     	Node q = start.next;
@@ -269,6 +285,7 @@ public class LinkedList {
     	System.out.println("Linkedlist reversed");
     	return start;
     }
+	// Code to order a linkedlist based on marks (decending order, highest marks place at the first node of your linkedlist)
     public static Node sort(Node start)
     {
     	Node m = start;
@@ -301,6 +318,7 @@ public class LinkedList {
 		System.out.println("Program for creating single linkedlist");
 		while(true)
 		{
+			// Menu driven code
 			System.out.println("Manu for different operation");
 			System.out.println("Press 0: Exit");
 			System.out.println("Press 1: Creation Linkedlist");
