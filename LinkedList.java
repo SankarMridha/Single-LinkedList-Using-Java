@@ -5,7 +5,7 @@ a singly linked list consisting of the following information in each node: stude
 (int), mark secured in a subject (float).
 */
 /*
-Code created by Sankar Kumar Mridha, date: 19.06.2023
+Code is Created by Sankar Kumar Mridha, date: 19.06.2023
 */
 class Node
 {
