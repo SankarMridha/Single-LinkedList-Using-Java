@@ -184,6 +184,13 @@ public class LinkedList {
         {
         	System.out.println("position not found, delete not posible ");
         }
+        else if(pos==1)
+        {
+        	Node q = start;
+        	start = start.next;
+        	System.out.println("Deleted node info-- registration no: "+q.regd_no+" and mark: "+q.mark);
+        	
+        }
         else
         {
         	Node q = start;
