@@ -84,11 +84,18 @@ public class LinkedList {
 		node.mark = mark;
 		node.next = null;
 		Node q = start;
-		while(q.next!=null)
+	   	if(start == null)
 		{
-			q = q.next;
+		    start = node;
 		}
-		q.next = node;
+		else
+		{
+			while(q.next!=null)
+			{
+				q = q.next;
+			}
+			q.next = node;
+		}
     	return start;
     }
 	// add one node at any position of singly linked list
@@ -269,7 +276,7 @@ public class LinkedList {
     			float m = sc.nextFloat();
     			q.mark = m;
     			System.out.println(m+" marks updated at registration no. "+regno);
-    			f = 0;
+    			f = 1;
     			break;
     		}
     		q=q.next;
