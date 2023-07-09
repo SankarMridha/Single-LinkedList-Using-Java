@@ -49,11 +49,18 @@ public class LinkedList {
     public static void display(Node start)
     {
     	Node p = start;
-    	System.out.println("Regis. no \t Marks");
-    	while(p!=null)
+    	if(start == null)
     	{
-    		System.out.println(p.regd_no+" \t\t "+p.mark);
-    		p = p.next;
+    		System.out.println("Empty linked list ");
+    	}
+    	else
+    	{
+    		System.out.println("Regis. no \t Marks");
+    		while(p!=null)
+    		{
+    			System.out.println(p.regd_no+" \t\t "+p.mark);
+    			p = p.next;
+    		}
     	}
     }
 	// add one node at the beginning of singly linked list
@@ -111,10 +118,14 @@ public class LinkedList {
 		node.mark = mark;
 		System.out.println("Enter position of new node: ");
         int pos = sc.nextInt();	
-        if(start == null)
+        if(pos == 0)
         {
+        	System.out.println("Position does not exit in linkedlist: ");
+        }
+        else if(start == null || pos == 1)
+        {
+        	node.next = start;
         	start = node;
-        	node.next = null;
         	System.out.println("Node add first position: ");
         }
         else if(pos>count(start))
